@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<html lang='pt-br'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <meta http-equiv='refresh' content='5'> -->
+    <title>SigeControl</title>
+
+
+    <link rel="stylesheet" href="./automacao.css">
+
+
+</head>
+
+
+<body>
+    <nav>
+        <img src="./oemlogo.png" alt="" class="logo">
+        <h1 class="titulo">Shield SigeControl Robótica Educacional com Arduino</h1>
+
+    </nav>
+
+    <main>
+
+        <div class='divledgeral'>
+            <h1 class='tituloled'>Acionamento Led:</h1>
+            <div class="grupoled">
+
+                <div class="divled">
+                    <img src="./ledapagado.png" alt="led vermelho" class="led1">
+                    <input type="button" class="botaoL1 leddesligado" value="Ligar D8">
+                </div>
+                <div class="divled">
+                    <img src="./ledapagado.png" alt="led vermelho" class="led2">
+                    <input type="button" class="botaoL2 leddesligado" value="Ligar D9">
+                </div>
+                <div class="divled">
+                    <img src="./ledapagado.png" alt="led vermelho" class="led3">
+                    <input type="button" class="botaoL3 leddesligado" value="Ligar D10">
+                </div>
+
+
+            </div>
+            <div class="grupoled">
+                <div class="divled">
+                    <img src="./ledapagado.png" alt="led vermelho" class="led4">
+                    <input type="button" class="botaoL4 leddesligado" value="Ligar D11">
+                </div>
+                <div class="divled">
+                    <img src="./ledapagado.png" alt="led vermelho" class="led5">
+                    <input type="button" class="botaoL5 leddesligado" value="Ligar D12">
+                </div>
+                <div class="divled">
+                    <img src="./ledapagado.png" alt="led vermelho" class="led6">
+                    <input type="button" class="botaoL6 leddesligado" value="Ligar D13">
+                </div>
+            </div>
+        </div>
+
+
+        <div class='divbotaogeral'>
+            <h1 class="titulobotao"> Leitura dos botões input D2 e D3 </h1>
+
+            <!-- if (dadoBotao == 0)
+            { -->
+            <div class="botaolinha">
+                <img src="./CircuitoAberto.png" alt="" class="tactil1">
+                <input type="button" value="D2 Desligado" class="testebotao1 inputbotaodesligado1">
+                <div class='botaoDesligado botaoteste1'>
+                    <h3> Low</h3>
+                </div>
+            </div>
+            <div class="botaolinha">
+                <img src="./CircuitoAberto.png" alt="" class="tactil2">
+                <input type="button" value="D3 Desligado" class="testebotao2 inputbotaodesligado2">
+                <div class='botaoDesligado botaoteste2'>
+                    <h3> Low</h3>
+                </div>
+            </div>
+
+
+
+            <!-- }else if (dadoBotao == 1)
+            {
+                <div class='botaoDesligado botao'>
+                    <h3> Botão D2 Desligado</h3>
+                </div>
+                <div class='botaoLigado botao'>
+                    <h3> Botão D3 Acionado</h3>
+                </div>
+        
+        
+                }else if (dadoBotao == 2)
+            {
+                <div class='botaoLigado botao'>
+                    <h3> Botão D2 Acionado</h3>
+                </div>
+                <div class='botaoDesligado botao'>
+                    <h3> Botão D3 Desligado</h3>
+                </div>
+        
+                }else if (dadoBotao == 3)
+            {
+                <div class='botaoLigado botao'>
+                    <h3> Botão D2 Acionado</h3>
+                </div>
+                <div class='botaoLigado botao'>
+                    <h3> Botão D3 Acionado</h3>
+                </div>
+        
+                } -->
+
+
+
+        </div>
+
+
+        <div class="ultrassonico">
+            <h1>As portas D2 e D3 gerenciando sensor Ultrassônico</h1>
+            <img src="./ultrassonico.png" alt="" class="imgultrassonico">
+            <div class="linha">
+                <img src="ultrassonico2.png" alt="" class="imgultrassonico2">
+                <div class="divdistancia">
+                    <div class="linhad">
+                        <h2>Distância:</h2>
+                        <h2 class="distanciavalor"></h2>
+                    </div>
+                    <input type='range' class='inputdistancia' name='dist' min='0' max='4' value='0' step='0.1'>
+                </div>
+               
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="analogicamenor">
+            <div class='analogicatitulo'>
+
+                <h1> Valores A0 a A5</h1>
+
+            </div>
+            <div class='analogicaleft'>
+                <div class="preparaanalogica">
+
+                    <div class='Analogica0'>
+
+                    </div>
+                    <div class='Analogica1'>
+
+                    </div>
+                    <div class='Analogica2'>
+
+                    </div>
+                    <div class='Analogica3'>
+
+                    </div>
+                    <div class='Analogica4'>
+
+                    </div>
+                    <div class='Analogica5'>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class='servocenter'>
+            <div class="tituloservo">
+                <h1> Servo Motor </h1>
+                <h2>Selecione o movimento angular:</h2>
+            </div>
+
+            <div class='servo1'>
+
+                <div class='servo '>
+                    <h2>Servo (D4) </h2>
+                    <h3 id='range-value1'> </h3>
+                    <div class="linha">
+                        <img src="./servo.png" alt="" class="imgservo">
+                        <div class="motor">
+                            <div class="motor-arm1"></div>
+                        </div>
+                    </div>
+
+                    <input type='range' class='angulo1' name='angulo' min='0' max='180' value='0' step='1'>
+
+
+                </div><br>
+
+                <div class='servo '>
+                    <h2>Servo (D5) </h2>
+                    <h3 id='range-value2'> </h3>
+                    <div class="linha">
+                        <img src="./servo.png" alt="" class="imgservo">
+                        <div class="motor">
+                            <div class="motor-arm2"></div>
+                        </div>
+                    </div>
+
+                    <input type='range' class='angulo2' name='angulo' min='0' max='180' value='0' step='1'>
+
+                </div><br>
+
+
+                <div class='servo'>
+                    <h2>Servo (D6) </h2>
+                    <h3 id='range-value3'> </h3>
+                    <div class="linha">
+                        <img src="./servo.png" alt="" class="imgservo">
+                        <div class="motor">
+                            <div class="motor-arm3"></div>
+                        </div>
+                    </div>
+                    <input type='range' class='angulo3' name='angulo' min='0' max='180' value='0' step='1'>
+
+                </div><br>
+
+                <div class='servo'>
+                    <h2>Servo (D7) </h2>
+                    <h3 id='range-value4'> </h3>
+                    <div class="linha">
+                        <img src="./servo.png" alt="" class="imgservo">
+                        <div class="motor">
+                            <div class="motor-arm4"></div>
+                        </div>
+                    </div>
+
+                    <input type='range' class='angulo4' name='angulo' min='0' max='180' value='0' step='1'>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <h2 class="titulopdf">Segue um PDF da Shield Robótica</h2>
+        <embed src="./Shield Sige Educacional Robótica-Automação-convertido.pdf#zoom=150" type="application/pdf"
+            width="100%" height="700px" class="pdf" />
+
+    </main>
+
+
+    <script src="./automacao.js"></script>
+</body>
+
+</html>
