@@ -694,7 +694,7 @@ main{
       input[type=range]::-webkit-slider-runnable-track {
         width: 70%;
         height: 20px;
-        background: yellow;
+        background: #d3d3d3;
         border-radius: 25px;
       }
       
